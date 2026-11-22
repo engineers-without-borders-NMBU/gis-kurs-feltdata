@@ -1,0 +1,10 @@
+# Feltdata og bilder deles ikke her (store filer, mulige personbilder)
+*.gpkg
+*.gpkg-wal
+*.gpkg-shm
+bilder/
+*.jpg
+*.png
+*.qgz~
+*.qgs~
+__pycache__/
