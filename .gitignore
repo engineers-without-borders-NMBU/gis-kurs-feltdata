@@ -1,10 +1,9 @@
-# Feltdata og bilder deles ikke her (store filer, mulige personbilder)
-*.gpkg
+# Midlertidige filer fra QGIS og GeoPackage
 *.gpkg-wal
 *.gpkg-shm
-bilder/
-*.jpg
-*.png
 *.qgz~
 *.qgs~
 __pycache__/
+
+# Bilder som skriptet lager lokalt hos hver deltaker
+bilder/

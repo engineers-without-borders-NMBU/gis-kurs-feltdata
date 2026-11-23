@@ -6,11 +6,21 @@ og bearbeider og analyserer dataene i QGIS.
 
 Kurset bruker QGIS, som er gratis: <https://qgis.org>
 
+**Videotutorial (DAG 2):** *lenke kommer*
+
 ## Innhold
 
-| Fil | Hva den gjør |
+| Fil / mappe | Hva det er |
 |---|---|
+| `data/` | Feltdataene fra kurset: én GeoPackage per gruppe (`Belysning_Campus_gruppe_X.gpkg`) og ekstradata for lyktestolper og andre lyspunkt. Dette er startpunktet for tutorialen |
+| `veiledning/Veiledning_GIS_tutorial.pdf` | Steg for steg-veiledning til videoen, med alle verktøy og innstillinger (også som `.md`) |
+| `veiledning/ferdig_kart_lysforhold.jpeg` | Ferdig kart over lysforholdene langs gangveiene på campus |
 | `skript/Eksporter_bilder_SWmaps.py` | Gjør bildene fra SW Maps om til vanlige bildefiler, slik at de kan vises i QGIS på alle maskiner |
+
+## Kom i gang
+
+1. Last ned repoet: **Code → Download ZIP**, og pakk ut.
+2. Følg `veiledning/Veiledning_GIS_tutorial.pdf` eller videoen. I steg 1 drar du lagene fra mappen `data` inn i QGIS.
 
 ---
 
@@ -50,12 +60,14 @@ direkte i QGIS og trenger verken nettleser eller JavaScript.
 
 1. **Lagre prosjektet**, så QGIS vet hvor mappen `bilder` skal ligge.
 2. **Marker laget** med bilder i lagpanelet.
-3. Åpne **Programtillegg → Python-konsoll** og klikk **Vis editor**
-   (ikonet med ark og blyant).
-4. Klikk mappeikonet i editoren, åpne `Eksporter_bilder_SWmaps.py` og trykk **Kjør (▶)**.
+3. Åpne **Programtillegg → Python-konsoll** (*Plugins → Python Console*) og
+   klikk **Vis editor** (*Show Editor*, ikonet med ark og blyant).
+4. Klikk mappeikonet i editoren (*Open Script…*), åpne `Eksporter_bilder_SWmaps.py`
+   og trykk **Kjør (▶)** (*Run Script*).
    I konsollen skal det stå for eksempel `Ferdig: 84 bilder lagret fra ...`.
 5. Gjenta steg 2–4 for hvert lag med bilder.
-6. Gå til **Lagegenskaper → Attributtskjema** og velg feltet `bilde_fil`:
+6. Gå til **Lagegenskaper → Attributtskjema** (*Properties → Attributes Form*).
+   Velg **Dra og slipp-designer** (*Drag and Drop Designer*) øverst, og velg feltet `bilde_fil`:
    - Widgettype: **Vedlegg** (Attachment)
    - Sti: **Relativ til prosjektsti**
    - Innebygd dokumentvisning: **Bilde**
@@ -78,8 +90,8 @@ direkte i QGIS og trenger verken nettleser eller JavaScript.
 Del **prosjektfila (`.qgz`), GeoPackage-filene og mappen `bilder`** samlet i én
 zip-fil, med samme mappestruktur. Da vises bildene hos alle.
 
-Feltdataene ligger ikke i dette repoet, fordi filene er for store og bildene
-kan vise personer.
+Feltdataene fra kurset ligger i mappen `data`. Bildene ligger inni
+GeoPackage-filene, og skriptet lager mappen `bilder` lokalt hos hver deltaker.
 
 ---
 
